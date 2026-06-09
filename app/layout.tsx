@@ -1,0 +1,50 @@
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { RegisterSW } from "@/components/RegisterSW";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Pesca · Embalses del Tajo",
+  description:
+    "Condiciones para planificar jornadas de pesca en los embalses de la cuenca del Tajo: presión, viento, estado del embalse, solunar, vedas e índice de actividad.",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Pesca Tajo",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0d9488",
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="es"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        {children}
+        <RegisterSW />
+      </body>
+    </html>
+  );
+}

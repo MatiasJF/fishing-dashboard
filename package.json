@@ -1,0 +1,42 @@
+{
+  "name": "san-juan-fishing-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "fetch": "tsx scripts/fetch.ts",
+    "harvest": "tsx scripts/harvest-saih.ts",
+    "zonas": "tsx scripts/zonas-osm.ts",
+    "icons": "tsx scripts/icons.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "next": "16.2.7",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-leaflet": "^5.0.0",
+    "recharts": "^3.8.1",
+    "suncalc": "^1.9.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^20.19.42",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/suncalc": "^1.9.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.7",
+    "playwright": "^1.60.0",
+    "tailwindcss": "^4",
+    "tsx": "^4.22.4",
+    "typescript": "^5",
+    "vitest": "^4.1.8"
+  }
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=Fishing Dashboard · captura de datos (npm run fetch)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/fishing-dashboard
+EnvironmentFile=-/opt/fishing-dashboard/.env
+ExecStart=/usr/bin/env npm run fetch
+User=www-data

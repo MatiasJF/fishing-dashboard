@@ -1,0 +1,10 @@
+[Unit]
+Description=Ejecuta la captura de datos del Fishing Dashboard cada 30 min
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=30min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

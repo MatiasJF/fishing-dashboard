@@ -1,0 +1,37 @@
+name: Cosechar embalses del SAIH
+
+# Re-cosecha el listado de embalses y sus tokens (que pueden rotar). Mensual + manual.
+# Usa Playwright headless; por eso va en un workflow aparte del cron de datos.
+on:
+  schedule:
+    - cron: "0 5 1 * *" # día 1 de cada mes, 05:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Instalar navegador de Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Cosechar
+        run: npm run harvest
+      - name: Commit si cambió config/sites.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- config/sites.json; then
+            echo "Sin cambios en config/sites.json."
+          else
+            git add config/sites.json
+            git commit -m "actualiza listado de embalses del SAIH"
+            git push
+          fi

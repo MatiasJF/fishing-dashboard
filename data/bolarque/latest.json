@@ -1,0 +1,102 @@
+{
+  "ts": "2026-06-09T15:18:27+02:00",
+  "meteo": {
+    "temp_c": {
+      "value": 31.7,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:27+02:00"
+    },
+    "humedad_pct": {
+      "value": 23,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:27+02:00"
+    },
+    "presion_hpa": {
+      "value": 1013,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:27+02:00"
+    },
+    "presion_delta_24h": {
+      "value": -3.2,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:27+02:00"
+    },
+    "presion_delta_48h": {
+      "value": -5.1,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:27+02:00"
+    },
+    "viento_kmh": {
+      "value": 12.6,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:27+02:00"
+    },
+    "viento_dir_deg": {
+      "value": 257,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:27+02:00"
+    },
+    "rachas_kmh": {
+      "value": 32,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:27+02:00"
+    }
+  },
+  "hidro": {
+    "volumen_hm3": {
+      "value": 26.27,
+      "source": "saih",
+      "fetched_at": "2026-06-09T14:00:00+02:00"
+    },
+    "llenado_pct": {
+      "value": 85.56,
+      "source": "saih",
+      "fetched_at": "2026-06-09T14:00:00+02:00"
+    },
+    "nivel_msnm": {
+      "value": 641.1,
+      "source": "saih",
+      "fetched_at": "2026-06-09T14:00:00+02:00"
+    },
+    "caudal_salida_m3s": {
+      "value": 11.51,
+      "source": "saih",
+      "fetched_at": "2026-06-09T14:00:00+02:00"
+    }
+  },
+  "solunar": {
+    "fase_lunar": "Cuarto menguante",
+    "fraccion_iluminada": 0.362,
+    "sol": {
+      "orto": "2026-06-09T06:42:32+02:00",
+      "ocaso": "2026-06-09T21:41:14+02:00"
+    },
+    "luna": {
+      "orto": "2026-06-09T02:44:40+02:00",
+      "ocaso": "2026-06-09T15:30:15+02:00"
+    },
+    "periodos": [
+      {
+        "tipo": "mayor",
+        "inicio": "2026-06-09T08:05:00+02:00",
+        "fin": "2026-06-09T10:05:00+02:00"
+      },
+      {
+        "tipo": "menor",
+        "inicio": "2026-06-09T20:50:00+02:00",
+        "fin": "2026-06-09T21:50:00+02:00"
+      }
+    ]
+  },
+  "veda": [],
+  "actividad": {
+    "score": 55,
+    "etiqueta": "alta",
+    "factores": {
+      "solunar": 0,
+      "presion": 98,
+      "viento": 98,
+      "luna": 57
+    }
+  }
+}

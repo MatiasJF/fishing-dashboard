@@ -1,0 +1,51 @@
+name: Actualizar datos del embalse
+
+on:
+  schedule:
+    # Cada 30 min. GitHub retrasa el cron con frecuencia (mín. real ~5 min); no se asume
+    # puntualidad. El SAIH refresca cada ~15 min, así que es suficiente (CLAUDE.md §2/§8).
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {} # disparo manual para pruebas
+
+# Necesario para que el job pueda commitear data/ de vuelta al repo.
+permissions:
+  contents: write
+
+# Evita solapamientos si una ejecución se retrasa.
+concurrency:
+  group: fetch-datos
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Obtener datos y generar snapshot
+        env:
+          AEMET_API_KEY: ${{ secrets.AEMET_API_KEY }}
+          SAIH_ENDPOINT: ${{ secrets.SAIH_ENDPOINT }}
+        run: npm run fetch
+
+      - name: Commit y push si hay cambios en data/
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data; then
+            echo "Sin cambios en data/; no se commitea."
+          else
+            git add data
+            git commit -m "actualiza datos del embalse ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi

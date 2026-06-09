@@ -1,0 +1,137 @@
+{
+  "_nota": "Recomendaciones ORIENTATIVAS (heurísticas de pesca), no normativa. El usuario las afina con su experiencia. La clave de cada especie debe coincidir con el 'nombre' de config/veda.json. Condiciones opcionales: meses (1-12), franja (amanecer|dia|atardecer|noche), presion (sube|baja|estable), actividad_min (0-100). Se aplica la primera regla que casa; si ninguna, el 'general'.",
+  "especies": {
+    "Black bass": {
+      "general": "Depredador ligado a estructura: vegetación, troncos, paredes y puntas de roca. Especie invasora: las capturas no se devuelven al agua.",
+      "reglas": [
+        {
+          "condiciones": { "meses": [5, 6, 7, 8, 9], "franja": ["amanecer", "atardecer", "noche"] },
+          "tecnica": "Señuelos de superficie (popper, walking, frog)",
+          "senuelo_cebo": "Topwater y vinilos ensartados sin plomo",
+          "profundidad": "Primeros metros",
+          "nota": "Máxima agresividad con poca luz y agua caldeada."
+        },
+        {
+          "condiciones": { "meses": [6, 7, 8, 9], "franja": ["dia"] },
+          "tecnica": "Finesse al fondo: drop shot, jig y creature baits",
+          "senuelo_cebo": "Vinilos finesse y jig",
+          "profundidad": "Media-honda (3-8 m)",
+          "nota": "Con sol alto busca sombra, profundidad y estructura."
+        },
+        {
+          "condiciones": { "meses": [3, 4, 5] },
+          "tecnica": "Crankbaits y vinilos cerca de zonas de freza",
+          "senuelo_cebo": "Crankbait, swimbait pequeño, vinilo",
+          "profundidad": "1-4 m",
+          "nota": "Prefreza/freza: peces cerca de la orilla."
+        },
+        {
+          "condiciones": { "presion": "baja" },
+          "tecnica": "Aprovecha la bajada de presión con señuelos de reacción",
+          "senuelo_cebo": "Spinnerbait, crankbait, vinilo veloz",
+          "profundidad": "Variable",
+          "nota": "El frente que se acerca suele activar la pesca."
+        }
+      ],
+      "fallback": {
+        "tecnica": "Sondea estructura con vinilos versátiles",
+        "senuelo_cebo": "Shad/finesse y jig",
+        "profundidad": "Adaptar a la cota",
+        "nota": "Empieza por la estructura más marcada."
+      }
+    },
+    "Lucioperca": {
+      "general": "Crepuscular y nocturna; caza en fondos y cambios de profundidad. Invasora: no se devuelve al agua.",
+      "reglas": [
+        {
+          "condiciones": { "franja": ["amanecer", "atardecer", "noche"] },
+          "tecnica": "Vertical jigging y vinilos al fondo",
+          "senuelo_cebo": "Vinilos shad montados pesados",
+          "profundidad": "Fondo y cambios de cota",
+          "nota": "Mejor con poca luz y algo de turbidez."
+        },
+        {
+          "condiciones": { "franja": ["dia"] },
+          "tecnica": "Drop shot y vinilos lentos a media agua",
+          "senuelo_cebo": "Vinilo finesse",
+          "profundidad": "Media-honda",
+          "nota": "De día baja el ritmo y busca lo más hondo."
+        }
+      ],
+      "fallback": {
+        "tecnica": "Vinilos al fondo cerca de estructura sumergida",
+        "senuelo_cebo": "Shad pesado",
+        "profundidad": "Fondo",
+        "nota": "Localiza cambios de profundidad."
+      }
+    },
+    "Lucio": {
+      "general": "Emboscada en vegetación y orillas. Invasora: no se devuelve al agua.",
+      "reglas": [
+        {
+          "condiciones": { "meses": [11, 12, 1, 2, 3] },
+          "tecnica": "Swimbaits grandes y jerkbaits lentos",
+          "senuelo_cebo": "Swimbait/jerk de tamaño grande",
+          "profundidad": "1-4 m",
+          "nota": "Aguas frías: temporada de grandes ejemplares."
+        },
+        {
+          "condiciones": {},
+          "tecnica": "Spinnerbaits, cucharillas grandes y swimbaits",
+          "senuelo_cebo": "Señuelos grandes de reacción",
+          "profundidad": "1-3 m",
+          "nota": "Junto a vegetación y orillas con estructura."
+        }
+      ],
+      "fallback": {
+        "tecnica": "Señuelos grandes junto a vegetación",
+        "senuelo_cebo": "Swimbait/jerk",
+        "profundidad": "1-3 m",
+        "nota": "Busca emboscadas en la vegetación."
+      }
+    },
+    "Carpa": {
+      "general": "Pesca de fondo con cebado; muy activa con aguas templadas. Invasora objeto de pesca.",
+      "reglas": [
+        {
+          "condiciones": { "meses": [4, 5, 6, 7, 8, 9, 10] },
+          "tecnica": "Método feeder/boilie con cebado",
+          "senuelo_cebo": "Boilies, maíz, pellets",
+          "profundidad": "Fondo",
+          "nota": "Amaneceres y noches templadas son los mejores momentos."
+        },
+        {
+          "condiciones": { "meses": [11, 12, 1, 2, 3] },
+          "tecnica": "Pesca paciente a fondo, cebado ligero",
+          "senuelo_cebo": "Maíz y boilies pequeños",
+          "profundidad": "Fondo profundo",
+          "nota": "Con frío reduce el cebado y busca zonas hondas."
+        }
+      ],
+      "fallback": {
+        "tecnica": "Fondo con cebado moderado",
+        "senuelo_cebo": "Maíz/boilies",
+        "profundidad": "Fondo",
+        "nota": "Localiza zonas de comida."
+      }
+    },
+    "Barbo común": {
+      "general": "Autóctono. En San Juan rige la captura y suelta: manipula lo mínimo. Fondo, entradas de agua y corriente.",
+      "reglas": [
+        {
+          "condiciones": { "meses": [4, 5, 6, 7, 8, 9] },
+          "tecnica": "Fondo en entradas de agua y colas",
+          "senuelo_cebo": "Cebos naturales: lombriz, maíz",
+          "profundidad": "Fondo",
+          "nota": "Captura y suelta: usa sacadera y desanzuela con cuidado."
+        }
+      ],
+      "fallback": {
+        "tecnica": "Fondo con cebo natural",
+        "senuelo_cebo": "Lombriz/maíz",
+        "profundidad": "Fondo",
+        "nota": "Captura y suelta obligatoria en San Juan."
+      }
+    }
+  }
+}

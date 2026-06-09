@@ -1,0 +1,18 @@
+[Unit]
+Description=Fishing Dashboard (Next.js)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/fishing-dashboard
+Environment=NODE_ENV=production
+Environment=PORT=3000
+# Carga AEMET_API_KEY y demás (opcional; el guion - evita fallo si no existe)
+EnvironmentFile=-/opt/fishing-dashboard/.env
+ExecStart=/usr/bin/env npm run start
+Restart=on-failure
+RestartSec=5
+User=www-data
+
+[Install]
+WantedBy=multi-user.target

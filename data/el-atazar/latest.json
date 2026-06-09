@@ -1,0 +1,128 @@
+{
+  "ts": "2026-06-09T15:18:27+02:00",
+  "meteo": {
+    "temp_c": {
+      "value": 28,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:28+02:00"
+    },
+    "humedad_pct": {
+      "value": 32,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:28+02:00"
+    },
+    "presion_hpa": {
+      "value": 1014.4,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:28+02:00"
+    },
+    "presion_delta_24h": {
+      "value": -2.5,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:28+02:00"
+    },
+    "presion_delta_48h": {
+      "value": -4.6,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:28+02:00"
+    },
+    "viento_kmh": {
+      "value": 6.8,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:28+02:00"
+    },
+    "viento_dir_deg": {
+      "value": 295,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:28+02:00"
+    },
+    "rachas_kmh": {
+      "value": 14.8,
+      "source": "openmeteo",
+      "fetched_at": "2026-06-09T15:18:28+02:00"
+    }
+  },
+  "hidro": {
+    "volumen_hm3": {
+      "value": 363.43,
+      "source": "saih",
+      "fetched_at": "2026-06-09T14:00:00+02:00"
+    },
+    "llenado_pct": {
+      "value": 85.31,
+      "source": "saih",
+      "fetched_at": "2026-06-09T14:00:00+02:00"
+    },
+    "nivel_msnm": {
+      "value": 863.89,
+      "source": "saih",
+      "fetched_at": "2026-06-09T14:00:00+02:00"
+    },
+    "caudal_salida_m3s": {
+      "value": 0,
+      "source": "saih",
+      "fetched_at": "2026-06-09T14:00:00+02:00"
+    }
+  },
+  "solunar": {
+    "fase_lunar": "Cuarto menguante",
+    "fraccion_iluminada": 0.362,
+    "sol": {
+      "orto": "2026-06-09T06:43:21+02:00",
+      "ocaso": "2026-06-09T21:45:39+02:00"
+    },
+    "luna": {
+      "orto": "2026-06-09T02:47:09+02:00",
+      "ocaso": "2026-06-09T15:33:23+02:00"
+    },
+    "periodos": [
+      {
+        "tipo": "mayor",
+        "inicio": "2026-06-09T08:10:00+02:00",
+        "fin": "2026-06-09T10:10:00+02:00"
+      },
+      {
+        "tipo": "menor",
+        "inicio": "2026-06-09T20:55:00+02:00",
+        "fin": "2026-06-09T21:55:00+02:00"
+      }
+    ]
+  },
+  "veda": [
+    {
+      "especie": "Black bass",
+      "estado": "habil",
+      "nota": "Exótica invasora (Anexo I.c). Todo el año como control; sin talla mínima ni cupo; los ejemplares NO se devuelven al agua (art. 25)."
+    },
+    {
+      "especie": "Lucioperca",
+      "estado": "habil",
+      "nota": "Exótica invasora (Anexo I.c). Todo el año como control; sin talla ni cupo; no se devuelve al agua (art. 25)."
+    },
+    {
+      "especie": "Lucio",
+      "estado": "habil",
+      "nota": "Exótica invasora (Anexo I.c). Todo el año como control; sin talla ni cupo; no se devuelve al agua (art. 25)."
+    },
+    {
+      "especie": "Carpa",
+      "estado": "habil",
+      "nota": "Exótica invasora objeto de pesca (Anexo I.c). Todo el año; sin talla ni cupo; no se devuelve al agua (art. 25)."
+    },
+    {
+      "especie": "Barbo común",
+      "estado": "habil",
+      "nota": "Autóctona objeto de pesca (Anexo I.a). Todo el año, pero el perímetro de San Juan es de captura y suelta obligatoria (Anexo X). Talla mínima 18 cm y cupo 12 donde no rija el C y S."
+    }
+  ],
+  "actividad": {
+    "score": 47,
+    "etiqueta": "moderada",
+    "factores": {
+      "solunar": 0,
+      "presion": 88,
+      "viento": 76,
+      "luna": 57
+    }
+  }
+}

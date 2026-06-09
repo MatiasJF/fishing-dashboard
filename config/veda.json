@@ -1,0 +1,46 @@
+{
+  "_nota": "Estado según la ORDEN 815/2026, de 27 de marzo (temporada 2026), BOCM nº 83 de 9-abr-2026. El Embalse de San Juan (cuenca del Tajo, río Alberche) NO tiene veda TEMPORAL por especie: todas las especies objeto de pesca son hábiles todo el año (no es zona truchera, art. 14.1). PERO el perímetro no vedado es de CAPTURA Y SUELTA obligatoria (Anexo X); las especies exóticas invasoras (Anexo I.c) NO se devuelven al agua (art. 25). Zonas VEDADAS (Anexo VIII): margen izquierda aguas abajo de la presa (primeros 500 m del río Alberche) y las zonas de baño de la playa del Muro durante el periodo de baño autorizado. Verificar y actualizar cada temporada con la orden vigente.",
+  "_fuente": "ORDEN 815/2026 — BOCM nº 83, 9-abr-2026. https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/especies-normas-pesca",
+  "avisos": [
+    "Perímetro pescable: solo CAPTURA Y SUELTA obligatoria (Anexo X). Las especies exóticas invasoras deben retirarse, no se devuelven al agua (art. 25).",
+    "Zona VEDADA: margen izquierda aguas abajo de la presa (primeros 500 m del río Alberche).",
+    "Zona VEDADA en periodo de baño: zonas de baño de la playa del Muro (margen derecha) durante el periodo autorizado de baño."
+  ],
+  "especies": [
+    {
+      "id": "black-bass",
+      "nombre": "Black bass",
+      "nombre_cientifico": "Micropterus salmoides",
+      "vedas": [],
+      "nota": "Exótica invasora (Anexo I.c). Todo el año como control; sin talla mínima ni cupo; los ejemplares NO se devuelven al agua (art. 25)."
+    },
+    {
+      "id": "lucioperca",
+      "nombre": "Lucioperca",
+      "nombre_cientifico": "Sander lucioperca",
+      "vedas": [],
+      "nota": "Exótica invasora (Anexo I.c). Todo el año como control; sin talla ni cupo; no se devuelve al agua (art. 25)."
+    },
+    {
+      "id": "lucio",
+      "nombre": "Lucio",
+      "nombre_cientifico": "Esox lucius",
+      "vedas": [],
+      "nota": "Exótica invasora (Anexo I.c). Todo el año como control; sin talla ni cupo; no se devuelve al agua (art. 25)."
+    },
+    {
+      "id": "carpa",
+      "nombre": "Carpa",
+      "nombre_cientifico": "Cyprinus carpio",
+      "vedas": [],
+      "nota": "Exótica invasora objeto de pesca (Anexo I.c). Todo el año; sin talla ni cupo; no se devuelve al agua (art. 25)."
+    },
+    {
+      "id": "barbo-comun",
+      "nombre": "Barbo común",
+      "nombre_cientifico": "Luciobarbus bocagei",
+      "vedas": [],
+      "nota": "Autóctona objeto de pesca (Anexo I.a). Todo el año, pero el perímetro de San Juan es de captura y suelta obligatoria (Anexo X). Talla mínima 18 cm y cupo 12 donde no rija el C y S."
+    }
+  ]
+}
