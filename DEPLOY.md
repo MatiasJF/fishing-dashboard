@@ -32,6 +32,11 @@ sudo mkdir -p /opt/fishing-dashboard && sudo chown "$USER" /opt/fishing-dashboar
 git clone git@github.com:MatiasJF/fishing-dashboard.git /opt/fishing-dashboard
 cd /opt/fishing-dashboard
 npm ci
+
+# IMPORTANTE: en el VPS los datos los genera el timer y son la fuente de la verdad.
+# Marca data/ como "skip-worktree" para que `git pull` no intente sobreescribirlos ni dé
+# conflictos con la semilla del repo. (Una sola vez tras el clone.)
+git ls-files data | xargs -r git update-index --skip-worktree
 ```
 
 ## 2. Variables de entorno (opcional)

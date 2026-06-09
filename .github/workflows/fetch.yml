@@ -1,11 +1,11 @@
 name: Actualizar datos del embalse
 
 on:
-  schedule:
-    # Cada 30 min. GitHub retrasa el cron con frecuencia (mín. real ~5 min); no se asume
-    # puntualidad. El SAIH refresca cada ~15 min, así que es suficiente (CLAUDE.md §2/§8).
-    - cron: "*/30 * * * *"
-  workflow_dispatch: {} # disparo manual para pruebas
+  # CRON DESACTIVADO: el despliegue es en VPS, donde la captura la hace el timer de systemd
+  # (deploy/fishing-fetch.timer). Dejar el cron aquí duplicaría la captura y, al commitear
+  # datos al repo, chocaría con los datos locales del VPS en cada `git pull`.
+  # Se conserva solo el disparo manual por si se quisiera usar el modelo Vercel/git.
+  workflow_dispatch: {}
 
 # Necesario para que el job pueda commitear data/ de vuelta al repo.
 permissions:

@@ -3,8 +3,8 @@ name: Cosechar embalses del SAIH
 # Re-cosecha el listado de embalses y sus tokens (que pueden rotar). Mensual + manual.
 # Usa Playwright headless; por eso va en un workflow aparte del cron de datos.
 on:
-  schedule:
-    - cron: "0 5 1 * *" # día 1 de cada mes, 05:00 UTC
+  # CRON DESACTIVADO (despliegue en VPS). La cosecha se ejecuta a mano cuando se quiera
+  # ampliar embalses: `npm run harvest` en el VPS, o disparo manual de este workflow.
   workflow_dispatch: {}
 
 permissions:
