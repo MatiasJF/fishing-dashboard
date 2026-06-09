@@ -69,12 +69,15 @@ Comprobar: `systemctl status fishing-dashboard` · `systemctl list-timers fishin
 
 ## 5. Nginx + dominio + HTTPS
 
+Antes: crea un registro **A** `fischer` en la zona `jackson-strong.es` apuntando a la IP del VPS,
+y abre el firewall (`sudo ufw allow 'Nginx Full'`). Comprueba la propagación con
+`dig +short fischer.jackson-strong.es` antes de pedir el certificado.
+
 ```bash
 sudo cp deploy/nginx-fishing-dashboard.conf /etc/nginx/sites-available/fishing-dashboard
-sudo sed -i 's/tu-dominio.com/MIDOMINIO.com/g' /etc/nginx/sites-available/fishing-dashboard
 sudo ln -s /etc/nginx/sites-available/fishing-dashboard /etc/nginx/sites-enabled/
 sudo nginx -t && sudo systemctl reload nginx
-sudo certbot --nginx -d MIDOMINIO.com           # añade HTTPS y renovación automática
+sudo certbot --nginx -d fischer.jackson-strong.es   # añade HTTPS y renovación automática
 ```
 
 ## 6. Actualizar la app (nuevos commits)
