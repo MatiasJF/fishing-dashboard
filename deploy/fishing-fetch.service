@@ -1,11 +1,18 @@
 [Unit]
-Description=Fishing Dashboard · captura de datos (npm run fetch)
-After=network-online.target
-Wants=network-online.target
+Description=Fishing Dashboard (Next.js)
+After=network.target
 
 [Service]
-Type=oneshot
+Type=simple
 WorkingDirectory=/opt/fishing-dashboard
+Environment=NODE_ENV=production
+Environment=PORT=3000
+# Carga AEMET_API_KEY y demás (opcional; el guion - evita fallo si no existe)
 EnvironmentFile=-/opt/fishing-dashboard/.env
-ExecStart=/usr/bin/env npm run fetch
+ExecStart=/usr/bin/env npm run start
+Restart=on-failure
+RestartSec=5
 User=www-data
+
+[Install]
+WantedBy=multi-user.target
